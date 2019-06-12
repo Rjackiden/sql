@@ -20,5 +20,6 @@ insert into Transanction values (sysdate(),1,3,4);
 insert into Transanction values (sysdate(),2,4,2);
 insert into Transanction values (sysdate(),3,5,3);             --test case
 
-select transaction_id,count( distinct customer_id) from transanction 
-group by transaction_id                                          --Solution
+select customer_id,count(  transaction_id) from transanction 
+group by customer_id
+order by customer_id                                          --Solution
